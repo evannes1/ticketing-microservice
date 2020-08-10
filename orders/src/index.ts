@@ -9,6 +9,7 @@ import { PaymentCreatedListener } from "./events/listeners/payment-created-liste
 // connect to mongo db via the auth-mongo-srv defined in auth-mongo-depl file.
 //  Use the standard port and give it a name for DB that will be created, here "auth".
 const start = async () => {
+  console.log("Starting orders service again...");
   if (!process.env.JWT_KEY) {
     throw new Error("JWT_KEY must be defined");
   }
